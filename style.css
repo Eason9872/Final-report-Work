@@ -78,6 +78,25 @@ p {
   margin-bottom: 1em;
 }
 
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ffff;
+  animation: typing 3s steps(20) forwards, blink 0.75s step-end infinite;
+  width: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20ch } /* ch 單位約等於字元寬度 */
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #00ffff }
+}
+
 /* 導覽列 */
 .navbar {
   display: flex;
