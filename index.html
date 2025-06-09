@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的期末報告</title>
+  <link rel="stylesheet" href="style.css" />
+<!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <div id="tsparticles"></div>
+
+<nav class="navbar">
+  <div class="nav-title">我的報告</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="#" data-section="home" onclick="showSection(event)" class="active">首頁</a></li>
+    <li><a href="#" data-section="intro" onclick="showSection(event)">自我介紹</a></li>
+    <li><a href="#" data-section="learned" onclick="showSection(event)">成果展示</a></li>
+    <li><a href="#" data-section="how-made" onclick="showSection(event)">網頁怎麼做的</a></li>
+  </ul>
+</nav>
+
+<!-- 側邊滑動選單 -->
+<div id="sideMenu" class="side-menu">
+  <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">❌</a>
+  <a href="#" data-section="home" onclick="showSection(event); toggleMenu()" class="active">首頁</a>
+  <a href="#" data-section="intro" onclick="showSection(event); toggleMenu()">自我介紹</a>
+  <a href="#" data-section="learned" onclick="showSection(event); toggleMenu()">成果展示</a>
+  <a href="#" data-section="how-made" onclick="showSection(event); toggleMenu()">網頁怎麼做的</a>
+</div>
+
+<!-- 主內容區 -->
+<div class="main-content">
+  <section id="home" class="content-section active">
+    <h2>歡迎來到我的期末報告首頁！</h2>
+    <h5>這裡是總覽頁，請使用漢堡選單來導覽</h5>
+    </p>
+  </section>
+
+  <section id="intro" class="content-section">
+    <h2>自我介紹</h2>
+    <p>我是宋承諺 一個南臺的畜牲</p>
+    <p>這學期學會了HTML、CSS和一點JavaScript</p>
+    <p>我蠻喜歡這堂課的，因為可以做出自己的網頁</p>
+    <p>這個期末報告讓我可以展現出這學期的成果 !</p>
+  </section>
+
+  <section id="learned" class="content-section">
+    <h2>成果展示</h2>
+    <p>這裡寫你學習 HTML/CSS/JS 的心得和收穫。</p>
+    <div class="work-buttons">
+  <button onclick="showContent('work1')">1 導覽頁</button>
+  <button onclick="showContent('work2')">2 景點介紹</button>
+  <button onclick="showContent('work3')">3 背景圖重疊</button>
+  <button onclick="showContent('work4')">4 九宮格圖片展示</button>
+  <button onclick="showContent('work5')">5 花卉介紹</button>
+  <button onclick="showContent('work6')">6 RWD選單</button>
+</div>
+
+<div id="work1" class="content">
+  <h3>HTML index練習</h3>
+  <p>我會做一個導覽頁 再用按鈕去導入到今天寫的程式</p>
+      <p>下面那張是參考圖~</p>
+      <img src="Work1.png" alt="導覽頁">
+</div>
+
+<div id="work2" class="content">
+  <h3>台南景點介紹</h3>
+  <p>這張圖片裡面使用的程式是css文繞圖</p>
+  <p>並且還有使用box modle and區塊模型</p>
+  <img src="work2.png" alt="台南景點">
+</div>
+
+<div id="work3" class="content">
+  <h3>背景圖重疊</h3>
+  <p>以下圖片使用了背景圖重疊background-repeat 這個程式碼</p>
+  <img src="Work3.png" alt="背景圖重疊">
+  <p>background-repeat 是一個 CSS 屬性，用來控制背景圖片是否要「重複」顯示（平鋪），以及怎麼重複。</p>
+  <h4>🖼️ 範例</h4>
+  <h5>body { <br>
+  background-image: url('bg.png');<br>
+  background-repeat: no-repeat;<br>
+  } <br>
+👉 背景圖片只會出現一次，不會重複。</h5>
+</div>
+
+<div id="work4" class="content">
+  <h3>「九宮格圖片展示」</h3>
+  <p>本作品使用的技術有：</p>
+  <p>HTML：建立圖片格子的結構</p>
+  <p>CSS Grid：打造 3×3 格子的版面</p>
+  <p>CSS 背景設定：
+  <br>background-image
+  <br>background-position
+  <br>background-size</p>
+  <p>我從這個作品學到了：CSS Grid 的實戰應用 背景圖切割技巧 HTML+CSS 結合的視覺設計能力 圖片與版面控制的細節調整</p>
+  <img src="Work4.png" alt="九宮格圖片">
+</div>
+
+<div id="work5" class="content">
+  <h3>花卉介紹內容</h3>
+  <p>學到什麼？
+  <br>JavaScript 的基礎事件處理（click 事件）
+  <br>如何用 JS 改變畫面內容
+  <br>做出有互動、能切換的網頁功能</p>
+  <img src="Work5.png" alt="花卉介紹">
+</div>
+
+<div id="work6" class="content">
+  <h3>RWD選單</h3>
+  <p>上方選單特色
+  <br>採用 漢堡選單（Hamburger Menu） 設計，常見於手機版網站
+  <br>
+  <br>使用者在手機裝置上會看到三條橫線的按鈕，點擊後展開導覽連結
+  <br>
+  <br>當畫面變寬，選單會自動顯示成橫列的標題，方便桌機使用者瀏覽</p>
+  <h4> 學到什麼？</h4>
+  <p>如何製作行動裝置友善的選單
+  <br>如何處理文字過長、圖片排版等 RWD 問題
+  <br>如何用簡單的 JS 和 CSS 提升網頁互動性與易用性</p>
+  <img src="Work6.png" alt="RWD選單">
+</div>
+
+  </section>
+
+  <section id="how-made" class="content-section">
+    <h2>網頁怎麼做的</h2>
+    <p>這個網頁是用純 HTML、CSS 和 JavaScript 寫成的，沒有使用任何框架。</p>
+    <p>主要使用了以下技術：</p>
+    <ul>
+      <li>響應式設計 (Responsive Design)，讓頁面能在手機、平板和電腦上自動調整排版。</li>
+      <li>使用 JavaScript 控制選單的開關和內容區塊切換，實現單頁應用效果。</li>
+      <li>CSS 漸變背景和動畫讓頁面看起來更有活力和現代感。</li>
+      <li>分離 HTML、CSS 和 JavaScript 三個檔案，方便維護和擴充。</li>
+    </ul>
+    <p>希望這個作品可以展現我對基礎網頁設計的學習成果！</p>
+  </section>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+   指導老師:劉毓芬 | 製作人：宋承諺
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* 整體排版 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* 漸層背景 */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+/* ===== 標題字體樣式設定 ===== */
+
+h1 {
+  font-size: 2.8em;
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 12px #00ffffaa;
+  margin-bottom: 0.6em;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #ff00ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff00ffaa;
+  margin-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: #ffaa00;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ffaa00aa;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: #00ff88;
+  font-weight: 600;
+  text-shadow: 0 0 6px #00ff8899;
+  margin-bottom: 0.4em;
+}
+
+h5 {
+  font-size: 1.3em;
+  color: #ff8888;
+  font-weight: 600;
+  text-shadow: 0 0 4px #ff888899;
+  margin-bottom: 0.3em;
+}
+
+/* ===== 段落文字樣式設定 ===== */
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #ffffffcc; /* 柔和白 */
+  margin-bottom: 1em;
+}
+
+/* 導覽列 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-title {
+  font-size: 1.5em;
+  color: #00ffff;
+}
+
+/* 桌機版選單 */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00ffff;
+}
+
+/* 漢堡按鈕 */
+.hamburger {
+  font-size: 1.8em;
+  color: #00ffff;
+  cursor: pointer;
+  display: none;
+}
+
+/* 側邊滑動選單 */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.side-menu a:hover {
+  background-color: #00ffff;
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
+}
+
+/* 主內容區 */
+.main-content {
+  padding: 60px 20px;
+}
+
+
+/* 內容分區隱藏與顯示 */
+.content-section {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* Footer 固定底部 */
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* 漸入動畫 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 響應式調整 */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* 可選：讓圖片有圓角 */
+  margin-top: 10px;
+}
+
+#tsparticles {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
