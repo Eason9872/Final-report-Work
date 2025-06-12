@@ -28,6 +28,19 @@ function showSection(event) {
   links.forEach((link) => link.classList.remove("active"));
   event.target.classList.add("active");
 }
+// 隱藏所有 .section 元素
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.add('hidden');
+  });
+
+  // 顯示被點擊的區塊
+  const targetId = event.target.getAttribute('data-section');
+  const targetSection = document.getElementById(targetId);
+
+  if (targetSection) {
+    targetSection.classList.remove('hidden');
+  }
+}
 function showContent(id) {
   // 先隱藏所有作品內容
   const contents = document.querySelectorAll('.content');
