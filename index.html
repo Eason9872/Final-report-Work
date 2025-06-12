@@ -21,7 +21,6 @@
     <li><a href="#" data-section="learned" onclick="showSection(event)">成果展示</a></li>
     <li><a href="#" data-section="how-made" onclick="showSection(event)">網頁怎麼做的</a></li>
     <li><a href="#" data-section="my-thoughts" onclick="showSection(event)">學習歷程與想法</a></li>
-    <li><a href="#" data-section="particles-info" onclick="showSection(event)">粒子效果</a></li>
   </ul>
 </nav>
 
@@ -32,7 +31,6 @@
   <a href="#" data-section="intro" onclick="showSection(event); toggleMenu()">自我介紹</a>
   <a href="#" data-section="learned" onclick="showSection(event); toggleMenu()">成果展示</a>
   <a href="#" data-section="how-made" onclick="showSection(event); toggleMenu()">網頁怎麼做的</a>
-  <a href="#" data-section="particles-info" onclick="showSection(event); toggleMenu()">粒子效果</a>
 </div>
 
 <!-- 主內容區 -->
@@ -40,6 +38,36 @@
   <section id="home" class="content-section active">
     <h2 class="typing">歡迎來到我的期末報告！</h2>
     <h5>這裡是總覽頁，請使用漢堡選單來導覽</h5>
+      <h2>粒子效果（tsParticles）</h2>
+  <p>
+    在這個網頁裡，我加入了一個我覺得很有趣的效果，就是背景會有很多小粒子漂浮移動，看起來很有科技感，而且滑鼠靠近時還會互動。這個功能是我用一個叫 <strong>tsParticles</strong> 的 JavaScript 套件做出來的。
+  </p>
+
+  <h3>這是什麼？</h3>
+  <p>
+    tsParticles 是一個可以在網頁上產生「粒子動畫」的工具，它其實是用 HTML 的 <code>&lt;canvas&gt;</code> 畫布，再搭配 JavaScript 去畫出一顆一顆小圓點，並讓它們移動、連線或對滑鼠有互動。
+  </p>
+
+  <h3>怎麼做的？</h3>
+  <p>
+    使用上很簡單，只要引入 CDN、放一個粒子容器，再用 JavaScript 設定參數就可以。例如我設定了：
+  </p>
+  <ul>
+    <li>顆粒數量（我用的是 80 顆）</li>
+    <li>粒子顏色和大小</li>
+    <li>移動速度</li>
+    <li>滑鼠靠近時會排斥（repulse）</li>
+  </ul>
+
+  <h3>為什麼想加這個？</h3>
+  <p>
+    一開始是想讓首頁看起來不要太單調，加個動畫效果讓它有「活的感覺」。後來研究這個套件後發現真的蠻好玩，也讓整個網頁有一點未來感。更重要的是，我可以藉這個機會學習怎麼使用外部 JavaScript 套件，還能順便了解一點 canvas 的原理，對我來說很有收穫。
+  </p>
+
+  <h3>心得</h3>
+  <p>
+    一開始看別人的網頁有這種粒子效果我覺得很酷，現在能自己做出來真的有成就感。這個功能不但讓我學到了新東西，也讓我對 JavaScript 有更深一點的認識。未來我還想試試看加入點擊互動、拖曳特效等等，讓整個網頁更有趣。
+  </p>
     </p>
   </section>
 
@@ -149,39 +177,6 @@
     一開始真的滿頭問號，CSS 怎麼寫都跑版、JavaScript 一直寫錯，連選單都不聽話。但慢慢看老師的簡報，一頁一頁跟著試，漸漸就有感覺了。有時候卡住太久，還會詢問GPT 幫忙解救我，真的很香 香噴噴的ai幫忙（ 感謝 AI 🙏）。<br><br>
     做到能讓網頁在電腦、平板、手機都順順的運作，對我來說超有成就感，尤其是看到自己的漢堡選單真的打開來的那一刻（明明只是三條線 😆），我內心是站起來鼓掌的。<br><br>
     雖然還不是什麼超專業的作品，但至少從頭到尾都是我自己做的，這份成品對我來說很有意義，也讓我更確定自己真的喜歡搞這些東西。
-  </p>
-</section>
-
-<section id="particles-info" style="padding: 2em;">
-  <h2>粒子效果（tsParticles）</h2>
-  <p>
-    在這個網頁裡，我加入了一個我覺得很有趣的效果，就是背景會有很多小粒子漂浮移動，看起來很有科技感，而且滑鼠靠近時還會互動。這個功能是我用一個叫 <strong>tsParticles</strong> 的 JavaScript 套件做出來的。
-  </p>
-
-  <h3>這是什麼？</h3>
-  <p>
-    tsParticles 是一個可以在網頁上產生「粒子動畫」的工具，它其實是用 HTML 的 <code>&lt;canvas&gt;</code> 畫布，再搭配 JavaScript 去畫出一顆一顆小圓點，並讓它們移動、連線或對滑鼠有互動。
-  </p>
-
-  <h3>怎麼做的？</h3>
-  <p>
-    使用上很簡單，只要引入 CDN、放一個粒子容器，再用 JavaScript 設定參數就可以。例如我設定了：
-  </p>
-  <ul>
-    <li>顆粒數量（我用的是 80 顆）</li>
-    <li>粒子顏色和大小</li>
-    <li>移動速度</li>
-    <li>滑鼠靠近時會排斥（repulse）</li>
-  </ul>
-
-  <h3>為什麼想加這個？</h3>
-  <p>
-    一開始是想讓首頁看起來不要太單調，加個動畫效果讓它有「活的感覺」。後來研究這個套件後發現真的蠻好玩，也讓整個網頁有一點未來感。更重要的是，我可以藉這個機會學習怎麼使用外部 JavaScript 套件，還能順便了解一點 canvas 的原理，對我來說很有收穫。
-  </p>
-
-  <h3>心得</h3>
-  <p>
-    一開始看別人的網頁有這種粒子效果我覺得很酷，現在能自己做出來真的有成就感。這個功能不但讓我學到了新東西，也讓我對 JavaScript 有更深一點的認識。未來我還想試試看加入點擊互動、拖曳特效等等，讓整個網頁更有趣。
   </p>
 </section>
 
