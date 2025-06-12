@@ -56,3 +56,38 @@ tsParticles.load("tsparticles", {
   },
   background: { color: "transparent" }
 });
+
+const btn = document.getElementById('menu-btn');
+const introText = document.getElementById('intro-text');
+
+btn.addEventListener('click', () => {
+  if (introText.style.display === 'none' || introText.style.display === '') {
+    introText.style.display = 'block';
+    btn.textContent = '隱藏介紹文字';
+  } else {
+    introText.style.display = 'none';
+    btn.textContent = '顯示介紹文字';
+  }
+});
+
+// 初始化粒子效果，讓背景一直存在
+particlesJS('particles-js', {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": { "enable": true, "value_area": 800 }
+    },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "move": { "enable": true, "speed": 2 }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" },
+      "onclick": { "enable": true, "mode": "push" }
+    }
+  },
+  "retina_detect": true
+});
