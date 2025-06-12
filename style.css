@@ -196,6 +196,15 @@ p {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
+.section {
+  transition: all 0.3s ease;
+  /* 可選：加些 padding/margin 美化顯示區塊 */
+}
+
 /* Footer 固定底部 */
 .footer {
   position: absolute;
